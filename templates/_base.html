@@ -8,6 +8,15 @@
 
 </head>
 <body>
+{% if user.is_authenticated %}
+    <span>hello {{ user.email }} |  <form action="{% url 'account_logout' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">خروج</button>
+                            </form></span>
+{% else %}
+    <a href="{% url 'account_login' %}">Login</a> | <a href="{% url 'account_signup' %}">Signup</a>
+
+{% endif %}
 {% block content %}
 
 {% endblock content %}
