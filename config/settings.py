@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'allauth',
     'allauth.account',
+    'products.apps.ProductsConfig',
+
 
 ]
 SITE_ID = 1
