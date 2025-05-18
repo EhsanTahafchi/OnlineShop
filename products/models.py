@@ -39,7 +39,7 @@ class Comment(models.Model):
     stars = models.CharField(max_length=10, choices=PRODUCT_STARS, verbose_name=_('stars'))
     datetime_created = models.DateTimeField(auto_now_add=True, verbose_name=_('datetime_created'))
     datetime_modified = models.DateTimeField(auto_now=True, verbose_name=_('datetime_modified'))
-    active = models.BooleanField(default=True, verbose_name=_('avtive'))
+    active = models.BooleanField(default=True, verbose_name=_('active'))
 
     objects = models.Manager()
     active_comments_manager = ActiveCommentManager()
